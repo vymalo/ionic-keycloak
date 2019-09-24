@@ -1,0 +1,16 @@
+{
+  "name": "@cmotion/ionic-keycloak-auth",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.1.1",
+    "@angular/core": "^8.1.1",
+    "@auth0/angular-jwt": "^3.0.0",
+    "@ionic-native/browser-tab": "^5.14.0",
+    "@ionic-native/core": "^5.0.0-beta.15",
+    "@ionic-native/deeplinks": "^5.14.0",
+    "@ionic-native/in-app-browser": "^5.0.0-beta.15",
+    "@ionic/angular": "^4.7.0",
+    "keycloak-js": "^6.0.1",
+    "rxjs": "^6.5.2"
+  }
+}

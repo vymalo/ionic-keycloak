@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/cmotion/ionic-keycloak-auth",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@ionic-native/deeplinks/ngx": "deepLink",
+      "@ionic/angular": "ionicAngular",
+      "@auth0/angular-jwt": "angularJwt",
+      "keycloak-js": "Keycloak_",
+      "@ionic-native/in-app-browser/ngx": "appBrowser",
+      "@ionic-native/in-app-browser/ngx/index": "appBrowserIdx",
+      "@ionic-native/browser-tab/ngx": "browserTab",
+      "@ionic-native/browser-tab/ngx/index": "browserTabIdx",
+      "@ionic-native/native-storage/ngx": "storage"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "downlevelIteration": true,
     "importHelpers": true,
     "module": "esnext",
@@ -13,6 +14,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@cmotion/ionic-keycloak-auth": [
+        "dist/cmotion/ionic-keycloak-auth"
+      ],
+      "@cmotion/ionic-keycloak-auth/*": [
+        "dist/cmotion/ionic-keycloak-auth/*"
+      ]
+    }
   }
 }
