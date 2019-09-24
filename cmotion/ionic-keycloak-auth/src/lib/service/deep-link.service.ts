@@ -5,7 +5,7 @@
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
 import {filter} from 'rxjs/operators';
-import {Deeplinks} from '@ionic-native/deeplinks/ngx';
+import {DeeplinkMatch, Deeplinks} from '@ionic-native/deeplinks/ngx';
 import {KeyValueStr} from '../model';
 import {NavController} from '@ionic/angular';
 
@@ -24,26 +24,30 @@ export class DeepLinkService {
   }
 
   init() {
-    this.deepLinks.route({
-      '/**': '/**',
-    }).subscribe(
-      match => {
-        // match.$route - the route we matched, which is the matched entry from the arguments to route()
-        // match.$args - the args passed in the link
-        // match.$link - the full link data
-        if (match.$link) {
-          const {$link: {path, fragment, host, scheme, url}} = match;
-          if (this.containsCode(fragment)) {
-            const extractCode = this.extractCode(fragment);
-            this.nextParams(extractCode.code);
-          }
+    this.deepLinks
+      .route({})
+      .subscribe(
+        (match: DeeplinkMatch) => {
+          // match.$route - the route we matched, which is the matched entry from the arguments to route()
+          // match.$args - the args passed in the link
+          // match.$link - the full link data
+          this.extractData(match.$link);
+        },
+        nomatch => {
+          // nomatch.$link - the full link data
+          this.extractData(nomatch.$link);
         }
-      },
-      nomatch => {
-        // nomatch.$link - the full link data
-        console.error('Got a deepLink that didn\'t match', nomatch);
+      );
+  }
+
+  private extractData($link) {
+    if ($link) {
+      const {path, fragment, host, scheme, url} = $link;
+      if (this.containsCode(fragment)) {
+        const extractCode = this.extractCode(fragment);
+        this.nextParams(extractCode.code);
       }
-    );
+    }
   }
 
   private extractCode(url: string) {

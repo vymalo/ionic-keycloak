@@ -12,3 +12,4 @@ export * from './keycloak-json-structure';
 export * from './keycloak-login-response';
 export * from './model-api';
 export * from './module-config';
+export * from './token-decoded';

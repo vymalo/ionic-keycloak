@@ -3,7 +3,7 @@
  */
 
 import {ModuleWithProviders, NgModule, Optional, SkipSelf} from '@angular/core';
-import {ModuleConfig} from './model';
+import {JwtConfig, ModuleConfig} from './model';
 import {DeepLinkService, KcTokenInterceptorService, KeycloakAuthService, StorageService} from './service';
 import {Platform} from '@ionic/angular';
 import {NativeStorage} from '@ionic-native/native-storage/ngx';
@@ -47,8 +47,8 @@ export class IonicKeycloakAuthModule {
         NativeStorage,
         HttpClientModule,
         config.kcOptionsProvider || {provide: KEYCLOAK_OPTIONS, useValue: config.keycloakConfig},
+        config.jwtConfigProvider || {provide: JWT_GET_AND_SETTER, useValue: config.jwtModuleOptions},
         {provide: DEEP_LINKING_OPTIONS, useValue: config.deepLinksConfig},
-        {provide: JWT_GET_AND_SETTER, useValue: config.jwtModuleOptions},
         StorageService,
         DeepLinkService,
         KeycloakAuthService,

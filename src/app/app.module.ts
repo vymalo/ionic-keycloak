@@ -31,6 +31,9 @@ import {IonicKeycloakAuthModule} from '../../dist/cmotion/ionic-keycloak-auth';
       },
       deepLinksConfig: {
         deepLinkingScheme: 'myapp'
+      },
+      keycloakConfig: {
+        jsonConfig: async () => environment.keycloakConfig
       }
     })
   ],

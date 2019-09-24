@@ -14,11 +14,11 @@ export class StorageService {
   ) {
   }
 
-  async setToken(value: AuthToken): Promise<void> {
+  public async setToken(value: AuthToken): Promise<void> {
     return this.config.setToken(value);
   }
 
-  async getToken(): Promise<AuthToken> {
+  public async getToken(): Promise<AuthToken> {
     return this.config.getToken();
   }
 

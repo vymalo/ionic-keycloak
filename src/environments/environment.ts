@@ -3,7 +3,19 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 export const environment = {
-  production: false
+  production: false,
+  keycloakConfig: {
+    realm: 'djaler',
+    'auth-server-url': 'https://auth.djaler.com/auth',
+    'ssl-required': 'external',
+    resource: 'mobile-app',
+    'verify-token-audience': true,
+    credentials: {
+      secret: '7fb3861a-0863-46f2-bb03-81158f55e3d5'
+    },
+    'use-resource-role-mappings': true,
+    'confidential-port': 0
+  }
 };
 
 /*

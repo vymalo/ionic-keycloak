@@ -1,9 +1,11 @@
 {
   "name": "@cmotion/ionic-keycloak-auth",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^8.1.1",
-    "@angular/core": "^8.1.1",
+    "@angular/core": "^8.1.1"
+  },
+  "dependencies": {
     "@auth0/angular-jwt": "^3.0.0",
     "@ionic-native/browser-tab": "^5.14.0",
     "@ionic-native/core": "^5.0.0-beta.15",
@@ -12,5 +14,28 @@
     "@ionic/angular": "^4.7.0",
     "keycloak-js": "^6.0.1",
     "rxjs": "^6.5.2"
-  }
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coding-motion/ionic-keycloak.git"
+  },
+  "keywords": [
+    "angular",
+    "angular8",
+    "ionic",
+    "ionic4",
+    "cordova",
+    "keycloak",
+    "auth0"
+  ],
+  "author": "coding motion <hello@codingmotion.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coding-motion/ionic-keycloak/issues"
+  },
+  "homepage": "https://github.com/coding-motion/ionic-keycloak#readme"
 }

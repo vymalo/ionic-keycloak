@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import {AfterViewInit, Component} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { AlertController } from '@ionic/angular';
+import {AlertController} from '@ionic/angular';
 
-import { UserData } from '../../providers/user-data';
+import {UserData} from '../../providers/user-data';
+import {KeycloakAuthService} from '../../../../dist/cmotion/ionic-keycloak-auth';
 
 
 @Component({
@@ -15,10 +16,12 @@ export class AccountPage implements AfterViewInit {
   username: string;
 
   constructor(
+    public keycloakAuthService: KeycloakAuthService,
     public alertCtrl: AlertController,
     public router: Router,
     public userData: UserData
-  ) { }
+  ) {
+  }
 
   ngAfterViewInit() {
     this.getUsername();
@@ -66,9 +69,11 @@ export class AccountPage implements AfterViewInit {
     console.log('Clicked to change password');
   }
 
-  logout() {
-    this.userData.logout();
-    this.router.navigateByUrl('/login');
+  async logout() {
+    await this.keycloakAuthService.logout();
+    console.log('Second');
+    await this.userData.logout();
+    return this.router.navigateByUrl('/login');
   }
 
   support() {

@@ -9,6 +9,7 @@ import {JwtConfig} from './jwt-config';
 
 export class ModuleConfig {
   kcOptionsProvider?: Provider;
+  jwtConfigProvider?: Provider;
 
   keycloakConfig?: KcConfig;
   deepLinksConfig: DeepLinkConfig;
