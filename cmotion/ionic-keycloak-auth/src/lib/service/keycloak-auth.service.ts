@@ -29,9 +29,7 @@ import {Router} from '@angular/router';
 const Keycloak = Keycloak_;
 const jwtHelperService: JwtHelperService = new JwtHelperService();
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class KeycloakAuthService {
 
   protected subject: BehaviorSubject<IDTokenDecoded>;
@@ -53,15 +51,24 @@ export class KeycloakAuthService {
     this.appPrefix = `${deepLinkConfig.deepLinkingScheme}://app`;
   }
 
+  /**
+   *
+   */
   public user(): Observable<IDTokenDecoded> {
     return this.subject.asObservable();
   }
 
+  /**
+   *
+   */
   public async init() {
     await this.initKeycloak();
     return this.refresh();
   }
 
+  /**
+   *
+   */
   public async logout() {
     await this.handleNewToken(null);
     const url: string = this.getLogoutUrl();
@@ -86,6 +93,11 @@ export class KeycloakAuthService {
     });
   }
 
+  /**
+   *
+   * @param isLogin
+   * @param redirectUrl
+   */
   public async login(isLogin: boolean = true, redirectUrl?: string): Promise<AuthToken> {
     try {
       if (redirectUrl[0] === '/') {
@@ -100,6 +112,11 @@ export class KeycloakAuthService {
     }
   }
 
+
+  /**
+   *
+   * @param refresh
+   */
   public async getToken(refresh = false) {
     let authToken = await this.storage.getToken();
     if (!authToken) {

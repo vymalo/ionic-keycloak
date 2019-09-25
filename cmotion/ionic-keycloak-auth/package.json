@@ -1,6 +1,6 @@
 {
   "name": "@cmotion/ionic-keycloak-auth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^8.1.1",
     "@angular/core": "^8.1.1",
@@ -13,7 +13,7 @@
     "keycloak-js": "^6.0.1",
     "rxjs": "^6.5.2"
   },
-  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.",
+  "description": "Authentication bei Keycloak for Ionic 4+",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
