@@ -1,6 +1,7 @@
 # Ionic Keycloak Auth
 
 [![npm version](https://badge.fury.io/js/%40cmotion%2Fionic-keycloak-auth.svg)](https://badge.fury.io/js/%40cmotion%2Fionic-keycloak-auth)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak?ref=badge_shield)
 
 > This module is designed for `Ionic 4` 
 > with `angular 7+` on `Android` and `IOS` 
