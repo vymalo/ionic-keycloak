@@ -108,5 +108,14 @@
         "ANDROID_PATH_PREFIX": "/"
       }
     }
-  }
+  },
+  "keywords": [
+    "angular",
+    "angular8",
+    "ionic",
+    "ionic4",
+    "cordova",
+    "keycloak",
+    "auth0"
+  ]
 }
