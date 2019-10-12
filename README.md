@@ -1,6 +1,6 @@
 
 # Ionic Angular Conference Application
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak?ref=badge_small)
 
 
 This application is purely a kitchen-sink demo of the Ionic Framework and Angular.
