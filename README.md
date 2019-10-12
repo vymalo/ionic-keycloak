@@ -1,6 +1,8 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak?ref=badge_shield)
 
 # Ionic Angular Conference Application
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak?ref=badge_shield)
+
 
 This application is purely a kitchen-sink demo of the Ionic Framework and Angular.
 
@@ -64,3 +66,7 @@ All app preview screenshots were taken by running `ionic serve --lab` on a retin
 ### iOS
 
 1. Run `ionic cordova run ios --prod`
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcoding-motion%2Fionic-keycloak?ref=badge_large)
