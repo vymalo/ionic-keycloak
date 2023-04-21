@@ -247,7 +247,7 @@ export class KeycloakAuthService {
     if (!authToken) {
       return false;
     }
-    return jwtHelperService.isTokenExpired(authToken.access_token, 10);
+    return !jwtHelperService.isTokenExpired(authToken.access_token, 10);
   }
 
   private async initKeycloakInstance() {
