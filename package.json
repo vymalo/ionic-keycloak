@@ -27,7 +27,7 @@
     "@angular/service-worker": "~8.1.1",
     "@auth0/angular-jwt": "^3.0.0",
     "@ionic-native/browser-tab": "^5.14.0",
-    "@ionic-native/core": "5.0.0-beta.15",
+    "@ionic-native/core": "5.28.0",
     "@ionic-native/deeplinks": "^5.14.0",
     "@ionic-native/in-app-browser": "^5.0.0-beta.15",
     "@ionic-native/native-storage": "^5.14.0",
